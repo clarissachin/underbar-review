@@ -235,7 +235,7 @@
       });
 
       it('returns -1 when the target cannot be found not in the list', function() {
-        var numbers = [345,2346, 356, 355, -35, 123, 456, 564723, 23423];
+        var numbers = [345, 2346, 356, 355, -35, 123, 456, 564723, 23423];
 
         expect(_.indexOf(numbers, 35)).to.equal(-1);
       });
@@ -382,7 +382,7 @@
       });
 
       it('should apply a function to every value in an array', function() {
-        var multiplyByTwo = function(number) { return number * 2 };
+        var multiplyByTwo = function(number) { return number * 2; };
 
         expect(_.map([1, 2, 3], multiplyByTwo)).to.eql([2, 4, 6]);
       });
