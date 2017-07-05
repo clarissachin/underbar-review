@@ -299,7 +299,7 @@
         cache[args] = func.apply(this, arguments);
       }
       return cache[args];
-    }
+    };
   };
 
   // Delays a function for the given number of milliseconds, and then calls
@@ -329,9 +329,9 @@
   _.shuffle = function(array) {
     var resultArr = [];
     var arr = array.slice();
-    function getRandomIndex() {
+    var getRandomIndex = function() {
       return Math.floor(Math.random() * arr.length);
-    }
+    };
     for (var i = 0; i < array.length; i++) {
       var randInd = getRandomIndex();
       resultArr.push(arr[randInd]);
